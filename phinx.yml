@@ -4,32 +4,32 @@ paths:
 
 environments:
     default_migration_table: migration_logs
-    default_database: repas_db
+    default_database: d1so4k673m69qi
     production:
-        adapter: mysql
-        host: 127.0.0.1
-        name: repas_db
-        user: root
-        pass: root
-        port: 3306
+        adapter: pgsql
+        host: ec2-50-19-222-129.compute-1.amazonaws.com
+        name: d1so4k673m69qi
+        user: kqdjlhmhqvsocx
+        pass: 12d063abce0612d61349869a0b6c16e205cfef5a0bdef5dfb4339682ed489bec
+        port: 5432
         charset: utf8
 
     development:
-        adapter: mysql
-        host: 127.0.0.1
-        name: repas_db
-        user: root
-        pass: root
-        port: 3306
+        adapter: pgsql
+        host: ec2-50-19-222-129.compute-1.amazonaws.com
+        name: d1so4k673m69qi
+        user: kqdjlhmhqvsocx
+        pass: 12d063abce0612d61349869a0b6c16e205cfef5a0bdef5dfb4339682ed489bec
+        port: 5432
         charset: utf8
 
     testing:
-        adapter: mysql
-        host: 127.0.0.1
-        name: repas_db
-        user: root
-        pass: root
-        port: 3306
+        adapter: pgsql
+        host: ec2-50-19-222-129.compute-1.amazonaws.com
+        name: d1so4k673m69qi
+        user: kqdjlhmhqvsocx
+        pass: 12d063abce0612d61349869a0b6c16e205cfef5a0bdef5dfb4339682ed489bec
+        port: 5432
         charset: utf8
 
 version_order: creation

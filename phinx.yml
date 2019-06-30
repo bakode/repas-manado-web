@@ -11,7 +11,7 @@ environments:
         name: repas_manado
         user: root
         pass: isijoGOBlok321#$!;
-        port: 5432
+        port: 3306
         charset: utf8
 
     development:
@@ -20,7 +20,7 @@ environments:
         name: repas_manado
         user: root
         pass: isijoGOBlok321#$!;
-        port: 5432
+        port: 3306
         charset: utf8
 
     testing:
@@ -29,7 +29,7 @@ environments:
         name: repas_manado
         user: root
         pass: isijoGOBlok321#$!;
-        port: 5432
+        port: 3306
         charset: utf8
 
 version_order: creation

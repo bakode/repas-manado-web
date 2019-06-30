@@ -40,7 +40,7 @@ use App\Http\Middlewares\Authentication as AuthMidd;
             'port' => '3306',
             'database' => 'repas_manado',
             'username' => 'root',
-            'password' => 'isijoGOBlok321#$!;',
+            'password' => "isijoGOBlok321#$!;",
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',

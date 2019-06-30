@@ -13,7 +13,8 @@ return [
             'password'      => env('APP_DB_PASSWORD', ''),
             'charset'       => env('APP_DB_CHARSET', 'utf8'),
             'collation'     => env('APP_DB_COLLATION', 'utf8_unicode_ci'),
-            'prefix'        => ''
+            'prefix'        => '',
+            'port'          => 3306
         ],
 
         'logger' => [

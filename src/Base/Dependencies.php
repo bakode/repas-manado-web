@@ -33,7 +33,21 @@ use App\Http\Middlewares\Authentication as AuthMidd;
 */
 
     $capsule =  new Eloquent();
-    $capsule->addConnection($container['settings']['db']);
+    $capsule->addConnection(
+        [
+            'driver' => 'mysql',
+            'host' => '206.189.158.77',
+            'port' => '3306',
+            'database' => 'repas_manado',
+            'username' => 'root',
+            'password' => 'isijoGOBlok321#$!;',
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+            'strict' => true,
+            'engine' => null,
+        ]
+    );
     $capsule->setAsGlobal();
     $capsule->bootEloquent();
 

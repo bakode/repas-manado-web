@@ -4,31 +4,31 @@ paths:
 
 environments:
     default_migration_table: migration_logs
-    default_database: d1so4k673m69qi
+    default_database: repas_manado
     production:
-        adapter: pgsql
-        host: ec2-50-19-222-129.compute-1.amazonaws.com
-        name: d1so4k673m69qi
-        user: kqdjlhmhqvsocx
-        pass: 12d063abce0612d61349869a0b6c16e205cfef5a0bdef5dfb4339682ed489bec
+        adapter: mysql
+        host: 206.189.158.77
+        name: repas_manado
+        user: root
+        pass: isijoGOBlok321#$!;
         port: 5432
         charset: utf8
 
     development:
-        adapter: pgsql
-        host: ec2-50-19-222-129.compute-1.amazonaws.com
-        name: d1so4k673m69qi
-        user: kqdjlhmhqvsocx
-        pass: 12d063abce0612d61349869a0b6c16e205cfef5a0bdef5dfb4339682ed489bec
+        adapter: mysql
+        host: 206.189.158.77
+        name: repas_manado
+        user: root
+        pass: isijoGOBlok321#$!;
         port: 5432
         charset: utf8
 
     testing:
-        adapter: pgsql
-        host: ec2-50-19-222-129.compute-1.amazonaws.com
-        name: d1so4k673m69qi
-        user: kqdjlhmhqvsocx
-        pass: 12d063abce0612d61349869a0b6c16e205cfef5a0bdef5dfb4339682ed489bec
+        adapter: mysql
+        host: 206.189.158.77
+        name: repas_manado
+        user: root
+        pass: isijoGOBlok321#$!;
         port: 5432
         charset: utf8
 

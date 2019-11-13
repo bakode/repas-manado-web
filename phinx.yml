@@ -7,7 +7,7 @@ environments:
     default_database: repas_manado
     production:
         adapter: mysql
-        host: 206.189.158.77
+        host: 178.128.62.114
         name: repas_manado
         user: repas
         pass: repas.password

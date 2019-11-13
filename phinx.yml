@@ -9,8 +9,8 @@ environments:
         adapter: mysql
         host: 206.189.158.77
         name: repas_manado
-        user: root
-        pass: isijoGOBlok321#$!;
+        user: repas
+        pass: repas.password
         port: 3306
         charset: utf8
 

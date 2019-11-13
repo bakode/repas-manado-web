@@ -4279,3 +4279,8 @@
 [2019-11-13 22:01:42] with_slim_log.INFO: Request: GET  [] {"uid":"799bf79"}
 [2019-11-13 22:01:42] with_slim_log.INFO: Response: 200 OK [] {"uid":"799bf79"}
 [2019-11-13 22:01:48] with_slim_log.INFO: Request: POST  [] {"uid":"b1764b8"}
+[2019-11-13 22:18:26] with_slim_log.INFO: Request: GET  [] {"uid":"4d6f062"}
+[2019-11-13 22:18:26] with_slim_log.INFO: Response: 303 See Other [] {"uid":"4d6f062"}
+[2019-11-13 22:18:26] with_slim_log.INFO: Request: GET  [] {"uid":"2521f70"}
+[2019-11-13 22:18:26] with_slim_log.INFO: Response: 200 OK [] {"uid":"2521f70"}
+[2019-11-13 22:18:31] with_slim_log.INFO: Request: POST  [] {"uid":"9cef843"}

@@ -36,11 +36,11 @@ use App\Http\Middlewares\Authentication as AuthMidd;
     $capsule->addConnection(
         [
             'driver' => 'mysql',
-            'host' => 'labs.aasumitro.id',
+            'host' => '178.128.62.114',
             'port' => '3306',
             'database' => 'repas_manado',
-            'username' => 'root',
-            'password' => "isijoGOBlok321#$!;",
+            'username' => 'repas',
+            'password' => "repas.password",
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',

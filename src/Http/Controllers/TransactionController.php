@@ -92,16 +92,25 @@ class TransactionController extends Controller
             ['register_number' => $parsed_data['register_number']]
         );
 
-        $transaction = Transaction::where('year', $parsed_data['year'] - 1)
-                                    ->where('building_id', $parsed_data['building_id'])
-                                    ->first();
-        if (!$transaction) {
-            $this->flash->addMessage('error', "Failed add transaction, Unpayed bill  on ". ($parsed_data['year'] - 1) ."!");
-            return $response->withRedirect($url);
+        $arr = explode("/", $parsed_data['year'], 2);
+        $register_year = $arr[0];
+
+        if ($register_year != date('Y')) {
+            $transaction = Transaction::where('year', $parsed_data['year'] - 1)
+                ->where('building_id', $parsed_data['building_id'])
+                ->first();
+
+            if (!$transaction) {
+                $this->flash->addMessage('error', "Failed add transaction, Unpayed bill  on ". ($parsed_data['year'] - 1) ."!");
+                return $response->withRedirect($url);
+            }
         }
+
+        $invoice = date('Y').'/'.rand(10000,99999).'#'.date('m');
 
         $data = [
             'title' => 'Pembayaran ruko',
+            'invoice' => $invoice,
             'building_id' => $parsed_data['building_id'],
             'year'  => $parsed_data['year'],
             'collector_id' => $this->auth->user()->id,
@@ -121,6 +130,32 @@ class TransactionController extends Controller
 
         $this->flash->addMessage('info', "Success make transaction!");
         return $response->withRedirect($url);
+    }
+
+    public function invoice($request, $response)
+    {
+        $register_number = $request->getParam('register_number');
+        $transaction_id = $request->getParam('transaction_id');
+
+        $building = Building::with('owner', 'market')
+            ->with(['price' => function($query) {
+                $query->with('type');
+            }])->where(
+                'register_number',
+                $register_number
+            )->first();
+
+        $transaction = Transaction::findOrFail($transaction_id);
+
+        $data = [
+            'path' => 'invoice',
+            'building' => $building,
+            'transaction' => $transaction
+        ];
+
+        // return $response->withJson($data, 200);
+        return $this->view->render($response, 'transactions/invoice.twig', compact('data'));
+
     }
 
 }

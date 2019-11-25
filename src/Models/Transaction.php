@@ -8,6 +8,7 @@ class Transaction extends Model
 
     protected $fillable = [
         'title',
+        'invoice',
         'year',
         'created_at',
         'building_id',

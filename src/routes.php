@@ -64,8 +64,11 @@ $app->group('', function() {
     $this->get('/dashboard/transactions', 'TransactionController:index')->setName('dash.transaction');
 
     $this->get('/dashboard/transactions/collect', 'TransactionController:show')->setName('dash.transaction.collect');
+    $this->get('/dashboard/transactions/detail', 'TransactionController:show')->setName('dash.transaction.detail');
+
     $this->get('/dashboard/transactions/{building_id}/{transaction_year}/payment', 'TransactionController:find')->setName('dash.transaction.find');
     $this->post('/dashboard/transactions/store', 'TransactionController:store')->setName('dash.transaction.store');
+    $this->get('/dashboard/transactions/invoice', 'TransactionController:invoice')->setName('dash.transaction.invoice');
 
     $this->get('/logout', 'AuthController:getSignOut')->setName('auth.signout');
 

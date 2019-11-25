@@ -16,6 +16,7 @@
                             <tr>
                                 <th rowspan="2" width="50">No</th>
                                 <th rowspan="2">Register</th>
+                                <th rowspan="2">Invoice</th>
                                 <th rowspan="2">Type</th>
                                 <th rowspan="2">Market</th>
                                 <th rowspan="2">Collector</th>
@@ -34,7 +35,12 @@
                                         {{loop.index}}
                                     </td>
                                     <td>
-                                        {{transaction.building.register_number}}
+                                        <a href="{{path_for('dash.transaction.detail')}}?register_number={{transaction.building.register_number}}">
+                                            {{transaction.building.register_number}}
+                                        </a>
+                                    </td>
+                                    <td>
+                                        {{transaction.invoice}}
                                     </td>
                                     <td>
                                         <span class="badge badge-pill badge-info">
